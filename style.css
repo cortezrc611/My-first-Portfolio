@@ -1,0 +1,920 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+body {
+   height: 219vh;
+   background-color:  #484646;
+}
+html {
+    scroll-behavior: smooth;
+  }
+header {
+position: fixed;
+top: 0; 
+left: 0;
+width: 100%;
+padding: 20px 100px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 100;
+background-color: #484646;
+}
+
+.logo img{
+    width: 100px;
+}
+
+.navbar a {
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 50;
+    margin-left: 25px;
+}
+.navbar a:hover {
+    background-color: #fff;
+    padding: 10px;
+    color: #484646;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.navbar a.active{
+ background-color: #fff;
+ padding: 10px;
+ color: #484646;
+ border-radius: 20px;
+}
+.landing-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+   
+}
+.landing-page h2{
+    font-weight: 250;
+    color: #fff;
+    font-size: 100px;
+    padding-left: 10px;
+}
+.landing-page h3{
+    font-weight: 250;
+    color: #fff;
+    font-size: 70px;
+    padding-left: 10px;
+}
+.suit img{ 
+    width: 480px;
+    filter: drop-shadow(20px 5px 4px #363636);
+    
+}
+.suit-mobile{
+  display: none;
+}
+.barong img{ 
+    width: 376.7px;
+    filter: drop-shadow(20px 5px 4px #363636);
+    margin-top: 50px;
+  
+}
+.landing-page h1{
+    font-weight: 450;
+    color: #fff;
+    font-size: 200px;
+}
+
+.text{
+    display: block;
+    line-height: 120px;
+}
+
+.about-text{
+    display: block;
+    line-height: 120px;
+}
+.about-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   gap: 30px;
+}
+.about-page h1{
+    font-weight: 550;
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 90px;
+   
+}
+.contact-me a{
+  text-decoration: none;
+  color: #313030;
+}
+.paragraph{
+    padding-left: 15px;
+    line-height: 25px;
+    color: #fff;
+    font-weight: 50;
+  
+}
+.about-paragraph{
+    padding-left: 15px;
+    line-height: 25px;
+    color: #fff;
+    font-weight: 50;
+    padding-bottom: 100px;
+}
+.contact-me button{
+    margin-left: 10px;
+    color: black;
+    padding: 20px;
+    width: 200px;
+    border-radius: 100px;
+    border-style: none;
+    text-transform: uppercase;
+
+}
+
+
+
+.skill-title{
+    padding-top: 120px;
+}
+.skill-title h1{
+    font-weight: 550;
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+   
+}
+.skills-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    text-align: center;
+    gap: 200px;
+}
+
+.skill img{ 
+    width: 156.7px;
+  
+}
+
+.skill-content h1{
+    color: #fff;
+    font-weight: 50;
+    padding-top: 5px;
+    font-size: 50px;
+}
+.skill-icons-frontend{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    
+}
+.skill-icons-backend{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    
+}
+.skill-icons-ux{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    
+}
+.skill-icons-frontend img{
+    height: 80px;
+    padding-top: 10px;
+}
+.skill-icons-backend img{
+    padding-top: 10px;
+    height: 50px;
+}
+
+.frontend{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+
+.backend{
+    display: flex;
+    gap: 119px;
+    justify-content: center;
+}
+
+.ui-ux{
+    display: flex;
+    gap: 210px;
+    justify-content: center;
+}
+
+.skill-icons-ux img{
+    padding-top: 10px;
+    height: 60px;
+}
+.credentials-title{
+    padding-top: 120px;
+}
+.credentials-title h1{
+    font-weight: 550;
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    padding-bottom: 50px;
+   
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px;
+}
+.close-btn {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+}
+
+.close-btn div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transform-origin: center;
+}
+
+.close-btn div:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-btn div:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .slideshow-container {
+    max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+  
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+   
+  }
+  .mySlides img{
+    border: #5e5d5d;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 5px;
+  }
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: rgb(20, 20, 20);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(255, 252, 252, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #000000;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    padding: 12px 16px;
+    color: rgb(255, 255, 255);
+  }
+ 
+  .row img{
+    max-height: 90px;
+    margin-left: 80px;
+    border: #5e5d5d;
+    border-style: solid;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  .contact{
+    padding: 100px;
+    background-color: #2e2d2d;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+  }
+  .footer-logo{
+    padding: 0px;
+  }
+ .footer-logo img{
+    width: 300px;
+ }
+
+ .contact-icons img{
+    margin-top: 10px;
+    width: 50px;
+    border-style: solid;
+    border-radius: 50px;
+    border-color: #000000;
+ }
+  .contact a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .contact-icons img:hover{
+    background-color: #fff;
+    transition: 0.5s;
+  }
+
+  @media (max-width: 1370px) {
+    .landing-page{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 80px;
+     
+  }
+  .landing-page h1{
+    font-weight: 450;
+    color: #fff;
+    font-size: 150px;
+}
+  .landing-page h2{
+      font-weight: 250;
+      color: #fff;
+      font-size: 70px;
+      padding-left: 10px;
+  }
+  .landing-page h3{
+      font-weight: 250;
+      color: #fff;
+      font-size: 50px;
+      padding-left: 10px;
+  }
+  .suit img{ 
+      width: 480px;
+      filter: drop-shadow(20px 5px 4px #363636);
+      
+  }
+  .contact-me button{
+    margin-left: 10px;
+    color: black;
+    padding: 20px;
+    width: 200px;
+    border-radius: 100px;
+    border-style: none;
+    text-transform: uppercase;
+
+}
+  }
+
+  @media (max-width: 1148px) {
+    .landing-page{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 80px;
+     
+  }
+  .landing-page h1{
+    font-weight: 450;
+    color: #fff;
+    font-size: 130px;
+}
+  .landing-page h2{
+      font-weight: 250;
+      color: #fff;
+      font-size: 70px;
+      padding-left: 10px;
+  }
+  .landing-page h3{
+      font-weight: 250;
+      color: #fff;
+      font-size: 50px;
+      padding-left: 10px;
+  }
+  .suit img{ 
+      width: 480px;
+      filter: drop-shadow(20px 5px 4px #363636);
+      
+  }
+
+
+.skill-title{
+  padding-top: 120px;
+}
+.skill-title h1{
+  font-weight: 550;
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+ 
+}
+.skills-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  text-align: center;
+  gap: 200px;
+}
+
+.skill img{ 
+  width: 156.7px;
+
+}
+
+.skill-content h1{
+  color: #fff;
+  font-weight: 50;
+  padding-top: 5px;
+  font-size: 40px;
+}
+.skill-icons-frontend{
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  
+}
+.skill-icons-backend{
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  
+}
+.skill-icons-ux{
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  
+}
+.skill-icons-frontend img{
+  height: 80px;
+  padding-top: 10px;
+}
+.skill-icons-backend img{
+  padding-top: 10px;
+  height: 50px;
+}
+
+.frontend{
+  display: flex;
+  gap: 100px;
+}
+
+.backend{
+  display: flex;
+  gap: 117px;
+}
+
+.ui-ux{
+  display: flex;
+  gap: 190px;
+}
+
+.skill-icons-ux img{
+  padding-top: 10px;
+  height: 60px;
+}
+  }
+
+  @media (max-width: 1061px){
+    .landing-page{
+      display: block;
+      align-items: center;
+      justify-content: center;
+      padding-top: 80px;
+     
+  }
+  .landing-page h1{
+    font-weight: 450;
+    color: #fff;
+    font-size: 130px;
+    text-align: center;
+}
+  .landing-page h2{
+      font-weight: 250;
+      color: #fff;
+      font-size: 70px;
+      text-align: center;
+      
+  }
+  .landing-page h3{
+      font-weight: 250;
+      color: #fff;
+      font-size: 50px;
+      text-align: center;
+     
+  }
+  .suit img{ 
+   display: none;
+    
+}
+.suit-mobile{
+  display: block;
+  text-align: center;
+}
+.suit-mobile img{
+    width: 480px;
+    filter: drop-shadow(20px 5px 4px #363636);
+}
+.text{
+  display: block;
+  line-height: 120px;
+  text-align: center;
+}
+
+.about-page {
+  display: block;
+  text-align: center;
+  
+}
+.about-page h1{
+  font-weight: 550;
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+  padding-top: 20px;
+ 
+}
+.contact-me a{
+text-decoration: none;
+color: #313030;
+}
+.paragraph{
+  padding-left: 15px;
+  line-height: 25px;
+  color: #fff;
+  font-weight: 50;
+
+}
+.about-paragraph{
+  text-align: center;
+  line-height: 25px;
+  color: #fff;
+  font-weight: 50;
+  padding-bottom: 100px;
+}
+
+.barong img{ 
+  width: 350px;
+  filter: drop-shadow(20px 5px 4px #363636);
+  margin-top: 50px;
+}
+
+.skill-title{
+  padding-top: 120px;
+}
+.skill-title h1{
+  font-weight: 550;
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+ 
+}
+.skills-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  text-align: center;
+  gap: 200px;
+}
+
+
+
+.skill-content h1{
+  color: #fff;
+  font-weight: 50;
+  padding-top: 5px;
+  font-size: 35px;
+}
+.skill-icons-frontend{
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  
+}
+.skill-icons-backend{
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  
+}
+.skill-icons-ux{
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  
+}
+.skill-icons-frontend img{
+  height: 80px;
+  padding-top: 10px;
+}
+.skill-icons-backend img{
+  padding-top: 10px;
+  height: 50px;
+}
+
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 50px;
+    }
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.navbar a {
+    padding: 20px;
+    font-size: 24px;
+    border-top: none;
+}
+.suit-mobile img{
+  width: 350px;
+  filter: drop-shadow(20px 5px 4px #363636);
+}
+.hamburger {
+    display: flex;
+}
+
+.header.active .navbar {
+    display: flex;
+}
+
+.header.active .close-btn {
+    display: block;
+}
+.contact {
+  padding: 10px;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.footer-logo img {
+  width: 80px;
+}
+
+.contact-info h3 {
+  font-size: 18px;
+}
+
+.contact-info p {
+  font-size: 14px;
+}
+
+.contact-icons a img {
+  width: 25px;
+  height: 25px;
+}
+.skill-title{
+  padding-top: 120px;
+}
+.skill-title h1{
+  font-weight: 550;
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+ 
+}
+.skills-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  text-align: center;
+  gap: 200px;
+}
+
+.skill img{ 
+  width: 156.7px;
+
+}
+
+.skill-content h1{
+  color: #fff;
+  font-weight: 50;
+  padding-top: 5px;
+  font-size: 40px;
+}
+.skill-icons-frontend{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  
+}
+.skill-icons-backend{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  
+}
+.skill-icons-ux{
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  
+}
+.skill-icons-frontend img{
+  height: 80px;
+  padding-top: 10px;
+}
+.skill-icons-backend img{
+  padding-top: 10px;
+  height: 50px;
+}
+
+.frontend{
+  display: flex;
+  gap: 100px;
+}
+
+.backend{
+  display: flex;
+  gap: 117px;
+}
+
+.ui-ux{
+  display: flex;
+  gap: 190px;
+}
+
+.skill-icons-ux img{
+  padding-top: 10px;
+  height: 60px;
+}
+.mySlides img{
+  border: #5e5d5d;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 5px;
+}
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: rgb(20, 20, 20);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(255, 252, 252, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #000000;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  padding: 12px 16px;
+  color: rgb(255, 255, 255);
+}
+
+.row img{
+display: none;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+.text h3{
+  display: block;
+  font-size: 30px;
+}
+}
+
